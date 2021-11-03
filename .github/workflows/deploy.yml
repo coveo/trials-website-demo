@@ -1,0 +1,23 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
+jobs:
+  build:
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set API_KEY and deploy to AWS CoveoDemo
+        run: |
+          sed -i -e 's/YOUR_API_KEY/${{ secrets.SEARCH_API_KEY }}/' index.html
+          sed -i -e 's/YOUR_ORG_ID/${{ secrets.ORG_ID }}/' index.html
+          aws s3 sync . s3://trial-website-search.coveodemo.com/ --delete --exclude '.*'
+          aws cloudfront create-invalidation --distribution-id E3AFEMOBTOY1FC --paths '/*'
