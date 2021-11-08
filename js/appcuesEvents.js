@@ -5,15 +5,15 @@ function appcuesInit(orgId) {
 document.addEventListener("DOMContentLoaded", function() {
     const orgId = localStorage.getItem('organizationId')
     const isFromCoveoDev = localStorage.getItem('coveoDev')
-
     if(orgId) {
         appcuesInit(orgId, isFromCoveoDev)
     }
 
-
-    userflow.identify('test123', {
+    userflow.init('ct_aybfvgmsqrh4np7ixkp5ibwnfu');
+    userflow.identify('test', {
     name: 'Kien Dang',
     email: 'kdang@coveo.com',
     signed_up_at: '2021-10-28T21:05:35.000+00:00',
     });
+
   });
