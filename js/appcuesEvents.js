@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         appcuesInit(orgId, isFromCoveoDev)
     }
 
-
+    userflow.init('ct_aybfvgmsqrh4np7ixkp5ibwnfu');
     userflow.identify('test123', {
     name: 'Kien Dang',
     email: 'kdang@coveo.com',
