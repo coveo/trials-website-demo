@@ -12,6 +12,21 @@ body {
   font-size: 14px;
 }
 
+.code-sandbox {
+  position: absolute;
+  top: 67px;
+  right: 28px;
+}
+
+.code-sandbox-button {
+  color: white;
+  background-color: var(--atomic-primary);
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 0.25rem;
+  font-family: var(--atomic-font-family);
+}
+
 .logo {
   grid-area: logo;
   display: grid;
@@ -118,8 +133,8 @@ atomic-facet[field="concepts"]::part(value-label) {
     grid-template-columns: 1fr minmax(150px, 325px) minmax(500px, 1100px) 1fr;
     grid-auto-flow: column;
     grid-template-areas:
-      ". logo   search      ."
-      ". facets breadbox ."
+      ". logo   search    ."
+      ". facets breadbox    ."
       ". facets topbar      ."
       ". facets results     ."
       ". facets pagination  ."
