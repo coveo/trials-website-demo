@@ -6,6 +6,7 @@
   "license": "SEE LICENSE IN <LICENSE>",
   "main": "index.js",
   "scripts": {
+    "start": "npx serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify js/* -p esmify > bundle.js"
   },
