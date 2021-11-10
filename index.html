@@ -11,7 +11,7 @@
 
     <link
       rel="stylesheet"
-      href="https://staticdev.cloud.coveo.com/atomic/v1/themes/coveo.css"
+      href="https://static.cloud.coveo.com/atomic/v1/themes/coveo.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
     <script
@@ -21,7 +21,7 @@
     <script src="bundle.js"></script>
     <script
       type="module"
-      src="https://staticdev.cloud.coveo.com/atomic/v1/atomic.esm.js"
+      src="https://static.cloud.coveo.com/atomic/v1/atomic.esm.js"
     ></script>
 
     <script>
@@ -216,42 +216,6 @@
                   font-weight: bold;
                   margin-right: 0.25rem;
                 }
-
-                .tag {
-                  color: #4b4b4b;
-                  display: flex;
-                  align-items: center;
-                  padding: 10px;
-                  margin-top: 10px;
-                  font-size: var(--atomic-text-base);
-                  font-weight: var(--atomic-font-normal);
-                  border-radius: var(--atomic-border-radius-md);
-                }
-
-                .tag .label {
-                  flex-grow: 1;
-                  margin-left: 10px;
-                }
-
-                .tag svg {
-                  width: 30px;
-                }
-
-                .featured {
-                  border: 1px solid #12c7ae;
-                }
-
-                .featured svg {
-                  color: #12c7ae;
-                }
-
-                .boosted {
-                  border: 1px solid #ffb900;
-                }
-
-                .boosted svg {
-                  color: #ffb900;
-                }
               </style>
               <atomic-result-section-visual image-size="large">
                 <atomic-result-image
@@ -270,59 +234,6 @@
               <atomic-result-section-title-metadata>
                 <atomic-result-printable-uri></atomic-result-printable-uri>
               </atomic-result-section-title-metadata>
-
-              <atomic-result-section-emphasized>
-                <atomic-field-condition
-                  must-match-is-top-result="true"
-                  must-match-is-recommendation="false"
-                >
-                  <div class="tag featured">
-                    <svg
-                      viewbox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7.18117 18.8795L3.01674 15.11C1.78554 13.9955 2.37034 11.9529 4.00477 11.6588L10.4969 10.4908C11.1271 10.3774 11.6649 9.96921 11.9435 9.39275L14.1993 4.72558C14.9273 3.21936 17.0727 3.21936 17.8007 4.72558L20.0565 9.39274C20.3351 9.96921 20.8729 10.3774 21.5031 10.4908L27.9952 11.6588C29.6297 11.9529 30.2145 13.9955 28.9833 15.11L24.8188 18.8795C24.3092 19.3408 24.0722 20.0315 24.1912 20.7085L25.3008 27.0215C25.5873 28.6519 23.8824 29.9047 22.4121 29.1442L16.9188 26.3029C16.3425 26.0048 15.6575 26.0048 15.0812 26.3029L9.5879 29.1442C8.11762 29.9047 6.4127 28.6519 6.69924 27.0215L7.80881 20.7085C7.9278 20.0315 7.69078 19.3408 7.18117 18.8795Z"
-                        stroke="currentColor"
-                      />
-                    </svg>
-
-                    <span class="label">Featured result</span>
-                    <span
-                      >Item score:
-                      <atomic-result-number
-                        field="score"
-                      ></atomic-result-number>
-                    </span>
-                  </div>
-                </atomic-field-condition>
-                <atomic-field-condition must-match-is-recommendation="true">
-                  <div class="tag boosted">
-                    <svg
-                      viewbox="0 0 18 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1.68165 10.9046L8.69644 1.43468C9.27026 0.660027 10.5 1.06588 10.5 2.02991V8.49988C10.5 9.05216 10.9477 9.49988 11.5 9.49988H15.5148C16.3361 9.49988 16.8072 10.4351 16.3183 11.0951L9.30356 20.5651C8.72974 21.3397 7.5 20.9339 7.5 19.9698V13.4999C7.5 12.9476 7.05228 12.4999 6.5 12.4999H2.48521C1.6639 12.4999 1.19279 11.5646 1.68165 10.9046Z"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span class="label"
-                      >Ranking powered by machine learning</span
-                    >
-                    <span>
-                      Item score:
-                      <atomic-result-number
-                        field="score"
-                      ></atomic-result-number>
-                    </span>
-                  </div>
-                </atomic-field-condition>
-              </atomic-result-section-emphasized>
 
               <atomic-result-section-excerpt>
                 <atomic-result-text field="excerpt"></atomic-result-text>
@@ -374,42 +285,6 @@
                   font-weight: bold;
                   margin-right: 0.25rem;
                 }
-
-                .tag {
-                  color: #4b4b4b;
-                  display: flex;
-                  align-items: center;
-                  padding: 10px;
-                  margin-top: 10px;
-                  font-size: var(--atomic-text-base);
-                  font-weight: var(--atomic-font-normal);
-                  border-radius: var(--atomic-border-radius-md);
-                }
-
-                .tag .label {
-                  flex-grow: 1;
-                  margin-left: 10px;
-                }
-
-                .tag svg {
-                  width: 30px;
-                }
-
-                .featured {
-                  border: 1px solid #12c7ae;
-                }
-
-                .featured svg {
-                  color: #12c7ae;
-                }
-
-                .boosted {
-                  border: 1px solid #ffb900;
-                }
-
-                .boosted svg {
-                  color: #ffb900;
-                }
               </style>
               <atomic-result-section-visual>
                 <atomic-field-condition
@@ -432,59 +307,6 @@
               <atomic-result-section-title-metadata>
                 <atomic-result-printable-uri></atomic-result-printable-uri>
               </atomic-result-section-title-metadata>
-
-              <atomic-result-section-emphasized>
-                <atomic-field-condition
-                  must-match-is-top-result="true"
-                  must-match-is-recommendation="false"
-                >
-                  <div class="tag featured">
-                    <svg
-                      viewbox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7.18117 18.8795L3.01674 15.11C1.78554 13.9955 2.37034 11.9529 4.00477 11.6588L10.4969 10.4908C11.1271 10.3774 11.6649 9.96921 11.9435 9.39275L14.1993 4.72558C14.9273 3.21936 17.0727 3.21936 17.8007 4.72558L20.0565 9.39274C20.3351 9.96921 20.8729 10.3774 21.5031 10.4908L27.9952 11.6588C29.6297 11.9529 30.2145 13.9955 28.9833 15.11L24.8188 18.8795C24.3092 19.3408 24.0722 20.0315 24.1912 20.7085L25.3008 27.0215C25.5873 28.6519 23.8824 29.9047 22.4121 29.1442L16.9188 26.3029C16.3425 26.0048 15.6575 26.0048 15.0812 26.3029L9.5879 29.1442C8.11762 29.9047 6.4127 28.6519 6.69924 27.0215L7.80881 20.7085C7.9278 20.0315 7.69078 19.3408 7.18117 18.8795Z"
-                        stroke="currentColor"
-                      />
-                    </svg>
-
-                    <span class="label">Featured result</span>
-                    <span
-                      >Item score:
-                      <atomic-result-number
-                        field="score"
-                      ></atomic-result-number>
-                    </span>
-                  </div>
-                </atomic-field-condition>
-                <atomic-field-condition must-match-is-recommendation="true">
-                  <div class="tag boosted">
-                    <svg
-                      viewbox="0 0 18 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1.68165 10.9046L8.69644 1.43468C9.27026 0.660027 10.5 1.06588 10.5 2.02991V8.49988C10.5 9.05216 10.9477 9.49988 11.5 9.49988H15.5148C16.3361 9.49988 16.8072 10.4351 16.3183 11.0951L9.30356 20.5651C8.72974 21.3397 7.5 20.9339 7.5 19.9698V13.4999C7.5 12.9476 7.05228 12.4999 6.5 12.4999H2.48521C1.6639 12.4999 1.19279 11.5646 1.68165 10.9046Z"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <span class="label"
-                      >Ranking powered by machine learning</span
-                    >
-                    <span>
-                      Item score:
-                      <atomic-result-number
-                        field="score"
-                      ></atomic-result-number>
-                    </span>
-                  </div>
-                </atomic-field-condition>
-              </atomic-result-section-emphasized>
 
               <atomic-result-section-excerpt>
                 <atomic-result-text field="excerpt"></atomic-result-text>
