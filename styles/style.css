@@ -8,6 +8,9 @@
   --atomic-primary-light: #D579A1;
   --atomic-primary-dark: #4D2C3A;
   --atomic-ring-primary: rgba(224, 78, 121, 0.5);
+
+  --spacing: 16px;
+  --search-box-width: 648px;
 }
 
 atomic-search-box {
@@ -72,24 +75,17 @@ body {
   margin-right: 12px;
 }
 
+.header-bg {
+  background-color: var(--atomic-neutral-light);
+  grid-area: 1 / -1 / 1 / 1;
+  height: 80px;
+}
+
 .logo {
   grid-area: logo;
   display: grid;
-  place-content: center;
-  margin: 20px 0;
-}
-
-.logo img {
-    width: 150px;
-}
-
-:root {
-  --spacing: 16px;
-  --search-box-width: 648px;
-}
-
-body {
-  margin: 0;
+  align-content: center;
+  margin-left: 10px;
 }
 
 body.atomic-modal-opened {
@@ -100,7 +96,7 @@ atomic-search-interface {
   display: grid;
   grid-template-columns: var(--spacing) 1fr var(--spacing);
   grid-template-areas:
-    ". logo      ."
+    ". logo        ."
     ". search      ."
     ". status      ."
     ". breadbox    ."

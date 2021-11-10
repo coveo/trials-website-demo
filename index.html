@@ -130,8 +130,9 @@
       </a>
     </div>
     <atomic-search-interface id="search" pipeline="Website Search">
+      <div class="header-bg"></div>
       <div class="logo">
-        <img src="images/CoveoLogo.png" />
+        <img src="./images/logo.svg" alt="Learning Center" />
       </div>
       <atomic-search-box></atomic-search-box>
       <atomic-facet-manager>
@@ -286,9 +287,10 @@
                 <atomic-field-condition
                   must-match-source="Coveo - Academy Courses"
                 >
-                  <atomic-result-image
-                    field="course_image"
-                  ></atomic-result-image>
+                  <atomic-result-image field="course_image"></atomic-result-image>
+                  <atomic-field-condition if-not-defined="course_image">
+                    <img src="./images/placeholder.png" alt="Academy" />
+                  </atomic-field-condition>
                 </atomic-field-condition>
               </atomic-result-section-visual>
 
