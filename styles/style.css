@@ -1,3 +1,22 @@
+:root {
+  --trial-magenta: #CB3778;
+  --trial-purple: #A173BC;
+  --trial-dark-blue: #3F3F71;
+  --trial-blue: #1372EC;
+
+  --atomic-primary: var(--trial-magenta);
+  --atomic-primary-light: #D579A1;
+  --atomic-primary-dark: #4D2C3A;
+  --atomic-ring-primary: rgba(224, 78, 121, 0.5);
+}
+
+atomic-search-box {
+  --atomic-primary: var(--trial-dark-blue);
+  --atomic-primary-light: #5d5da8;
+  --atomic-primary-dark: #22223D;
+  --atomic-ring-primary: rgba(63, 63, 113, 0.5);
+}
+
 body {
   margin: 0;
 }
@@ -5,10 +24,10 @@ body {
 .demo-banner {
   padding-top: 10px;
   padding-bottom: 10px;
-  background: #1372ec;
+  background: var(--trial-dark-blue);
   color: #fff;
   text-align: center;
-  font-family: "Arial";
+  font-family: var(--atomic-font-family);
   font-size: 14px;
 }
 
@@ -20,7 +39,7 @@ body {
 
 .code-sandbox-button {
   color: white;
-  background-color: var(--atomic-primary);
+  background-color: var(--trial-blue);
   text-decoration: none;
   padding: 16px;
   border-radius: 0.25rem;
@@ -41,7 +60,7 @@ body {
 
 .floating-button {
   color: white;
-  background-color: #0BA893;
+  background-color: var(--trial-blue);
   text-decoration: none;
   padding: 16px 24px 16px 16px;
   border-radius: 0.25rem;

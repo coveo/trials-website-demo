@@ -8,3 +8,15 @@
   font-weight: bold;
   margin-right: 0.25rem;
 }
+
+.featured::part(result-badge-element) {
+  background-color: white;
+  border: 1px solid var(--trial-magenta);
+  color: var(--trial-magenta);
+}
+
+.recommended::part(result-badge-element) {
+  background-color: white;
+  border: 1px solid var(--trial-purple);
+  color: var(--trial-purple);
+}
