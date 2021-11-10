@@ -1,0 +1,10 @@
+.field {
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.field-label {
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
