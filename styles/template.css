@@ -24,3 +24,8 @@
 atomic-result-printable-uri {
   --atomic-primary: var(--trial-blue);
 }
+
+atomic-result-section-visual#yt-visual {
+  height: auto;
+  aspect-ratio: auto;
+}
