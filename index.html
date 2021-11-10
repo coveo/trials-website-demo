@@ -42,6 +42,18 @@
           "Coveo - YouTube Playlists": "YouTube Playlists",
         });
       })();
+
+      redirectToPlatform = () => {
+        const orgId = localStorage.getItem("organizationId");
+        if (orgId === undefined || orgId === null) {
+          window.open("https://platform.cloud.coveo.com/login", "_blank");
+        } else {
+          window.open(
+            `https://platform.cloud.coveo.com/admin/#${orgId}/home/`,
+            "_blank"
+          );
+        }
+      };
     </script>
   </head>
 
@@ -61,11 +73,7 @@
       >
     </div>
     <div class="explore-coveo">
-      <a
-        class="floating-button"
-        href="https://platform.cloud.coveo.com/login"
-        target="_blank"
-      >
+      <a class="floating-button" href="javascript:redirectToPlatform()">
         <span class="floating-button-text">Explore Coveo platform</span>
         <svg
           width="19"
