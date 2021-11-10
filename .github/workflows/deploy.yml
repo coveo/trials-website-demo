@@ -23,8 +23,7 @@ jobs:
 
       - name: Set API_KEY and deploy to AWS CoveoDemo
         run: |
-          sed -i -e 's/YOUR
-          _API_KEY/${{ secrets.SEARCH_API_KEY }}/' index.html
+          sed -i -e 's/YOUR_API_KEY/${{ secrets.SEARCH_API_KEY }}/' index.html
           sed -i -e 's/YOUR_ORG_ID/${{ secrets.ORG_ID }}/' index.html
           aws s3 sync . s3://trial-website-search.coveodemo.com/ --delete --exclude '.*'
           aws cloudfront create-invalidation --distribution-id E3AFEMOBTOY1FC --paths '/*'
