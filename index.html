@@ -1,371 +1,537 @@
 <!DOCTYPE html>
 
 <html dir="ltr" lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
-        <title>Coveo Demo | Website</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Coveo Demo | Website</title>
 
-        <link rel="stylesheet" href="https://staticdev.cloud.coveo.com/atomic/v1/themes/coveo.css"/>
-        <link rel="stylesheet" href="styles/style.css"/>
-        <script type="text/javascript" src="https://api.appcues.cloud.coveo.com/85197.js"></script>
-        <script src="bundle.js"></script>
-        <script type="module" src="https://staticdev.cloud.coveo.com/atomic/v1/atomic.esm.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://staticdev.cloud.coveo.com/atomic/v1/themes/coveo.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script
+      type="text/javascript"
+      src="https://api.appcues.cloud.coveo.com/85197.js"
+    ></script>
+    <script src="bundle.js"></script>
+    <script
+      type="module"
+      src="https://staticdev.cloud.coveo.com/atomic/v1/atomic.esm.js"
+    ></script>
 
-        <script>
-            (async () => {
-                await customElements.whenDefined("atomic-search-interface");
-                const searchInterface = document.querySelector("#search");
+    <script>
+      (async () => {
+        await customElements.whenDefined("atomic-search-interface");
+        const searchInterface = document.querySelector("#search");
 
-                await searchInterface.initialize({accessToken: "xxed327f95-ad2c-454f-ae9d-e4b08098553f", organizationId: "trialdemowebja9n0qm8"});
+        await searchInterface.initialize({
+          accessToken: "xxed327f95-ad2c-454f-ae9d-e4b08098553f",
+          organizationId: "trialdemowebja9n0qm8",
+        });
 
-                searchInterface.executeFirstSearch();
+        searchInterface.executeFirstSearch();
 
-                searchInterface.i18n.addResourceBundle("en", "caption-source", {
-                    "Coveo - Academy Courses": "Academy Courses",
-                    "Coveo - Blog": "Blog",
-                    "Coveo - YouTube Playlists": "YouTube Playlists"
-                });
-            })();
-        </script>
-    </head>
+        searchInterface.i18n.addResourceBundle("en", "caption-source", {
+          "Coveo - Academy Courses": "Academy Courses",
+          "Coveo - Blog": "Blog",
+          "Coveo - YouTube Playlists": "YouTube Playlists",
+        });
+      })();
+    </script>
+  </head>
 
-    <body>
-        <div class="demo-banner">
-            <span>This is a demo search page built with
-                <u>Coveo</u>
-
-            </span>
-        </div>
-        <div class="code-sandbox">
-            <a class="code-sandbox-button" href="https://codesandbox.io/s/github/coveo/atomic-documentation-codesandbox/tree/1.8.0/?from-embed" target="_blank">Open code sandbox</a>
-        </div>
-        <div class="explore-coveo">
-            <a class="floating-button" href="https://platform.cloud.coveo.com/login" target="_blank">
-                <span class="floating-button-text">Explore Coveo platform</span>
-                <svg width="19" height="14" viewbox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.698242 7L17.1717 7" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.5957 1L18.0869 7L12.5957 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-
-        <div class="restart-tour">
-            <a class="floating-button" href="javascript:Appcues.show('7129334b-5c0a-4e3b-a51f-cc984b1ecad2')">
-                <span class="floating-button-text">Restart tour</span>
-                <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.1205 12.6261C17.0618 16.0784 14.4497 18.9326 11.2861 19.0011C8.12257 19.0695 5.60558 16.3263 5.66426 12.8739C5.72294 9.42151 8.33507 6.56733 11.4986 6.49889C14.6622 6.43045 17.1792 9.17368 17.1205 12.6261Z" stroke="white"/>
-                    <path d="M18.8129 8.69348C19.8445 8.83351 20.5039 9.17129 20.6318 9.70853C20.9874 11.2017 17.1032 13.6701 11.9562 15.2219C6.80917 16.7737 2.34845 16.8212 1.99288 15.3281C1.86494 14.7909 2.28587 14.1274 3.117 13.4257" stroke="white" stroke-linecap="round"/>
-                    <path d="M18.6369 17.719L18.5994 19.9252M18.5994 19.9252L18.5619 22.1315M18.5994 19.9252L16.5777 19.969M18.5994 19.9252L20.6211 19.8815" stroke="white" stroke-linecap="round"/>
-                    <path d="M8.32237 2.27183L8.30362 3.37497M8.30362 3.37497L8.28487 4.4781M8.30362 3.37497L7.29277 3.39683M8.30362 3.37497L9.31446 3.3531" stroke="white" stroke-linecap="round"/>
-                    <path d="M6.20705 4.8312C6.18634 6.04969 5.26441 7.05705 4.14786 7.0812C3.03131 7.10535 2.14296 6.13716 2.16367 4.91867C2.18438 3.70018 3.10631 2.69282 4.22286 2.66867C5.33941 2.64451 6.22776 3.61271 6.20705 4.8312Z" stroke="white"/>
-                </svg>
-            </a>
-        </div>
-    </body>
-</html>
-<atomic-search-interface id="search" pipeline="Website Search">
-    <div class="logo">
-        <img src="images/CoveoLogo.png"/>
+  <body>
+    <div class="demo-banner">
+      <span
+        >This is a demo search page built with
+        <u>Coveo</u>
+      </span>
     </div>
-    <atomic-search-box></atomic-search-box>
-    <atomic-facet-manager>
-        <atomic-facet field="source" label="Content type" display-values-as="link"></atomic-facet>
+    <div class="code-sandbox">
+      <a
+        class="code-sandbox-button"
+        href="https://codesandbox.io/s/github/coveo/atomic-documentation-codesandbox/tree/1.8.0/?from-embed"
+        target="_blank"
+        >Open code sandbox</a
+      >
+    </div>
+    <div class="explore-coveo">
+      <a
+        class="floating-button"
+        href="https://platform.cloud.coveo.com/login"
+        target="_blank"
+      >
+        <span class="floating-button-text">Explore Coveo platform</span>
+        <svg
+          width="19"
+          height="14"
+          viewbox="0 0 19 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.698242 7L17.1717 7"
+            stroke="white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M12.5957 1L18.0869 7L12.5957 13"
+            stroke="white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <div class="restart-tour">
+      <a
+        class="floating-button"
+        href="javascript:Appcues.show('7129334b-5c0a-4e3b-a51f-cc984b1ecad2')"
+      >
+        <span class="floating-button-text">Restart tour</span>
+        <svg
+          width="20"
+          height="20"
+          viewbox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.1205 12.6261C17.0618 16.0784 14.4497 18.9326 11.2861 19.0011C8.12257 19.0695 5.60558 16.3263 5.66426 12.8739C5.72294 9.42151 8.33507 6.56733 11.4986 6.49889C14.6622 6.43045 17.1792 9.17368 17.1205 12.6261Z"
+            stroke="white"
+          />
+          <path
+            d="M18.8129 8.69348C19.8445 8.83351 20.5039 9.17129 20.6318 9.70853C20.9874 11.2017 17.1032 13.6701 11.9562 15.2219C6.80917 16.7737 2.34845 16.8212 1.99288 15.3281C1.86494 14.7909 2.28587 14.1274 3.117 13.4257"
+            stroke="white"
+            stroke-linecap="round"
+          />
+          <path
+            d="M18.6369 17.719L18.5994 19.9252M18.5994 19.9252L18.5619 22.1315M18.5994 19.9252L16.5777 19.969M18.5994 19.9252L20.6211 19.8815"
+            stroke="white"
+            stroke-linecap="round"
+          />
+          <path
+            d="M8.32237 2.27183L8.30362 3.37497M8.30362 3.37497L8.28487 4.4781M8.30362 3.37497L7.29277 3.39683M8.30362 3.37497L9.31446 3.3531"
+            stroke="white"
+            stroke-linecap="round"
+          />
+          <path
+            d="M6.20705 4.8312C6.18634 6.04969 5.26441 7.05705 4.14786 7.0812C3.03131 7.10535 2.14296 6.13716 2.16367 4.91867C2.18438 3.70018 3.10631 2.69282 4.22286 2.66867C5.33941 2.64451 6.22776 3.61271 6.20705 4.8312Z"
+            stroke="white"
+          />
+        </svg>
+      </a>
+    </div>
+    <atomic-search-interface id="search" pipeline="Website Search">
+      <div class="logo">
+        <img src="images/CoveoLogo.png" />
+      </div>
+      <atomic-search-box></atomic-search-box>
+      <atomic-facet-manager>
+        <atomic-facet
+          field="source"
+          label="Content type"
+          display-values-as="link"
+        ></atomic-facet>
         <atomic-facet field="author" label="Author"></atomic-facet>
         <atomic-facet field="concepts" label="Topics"></atomic-facet>
         <atomic-numeric-facet field="course_duration" label="Course duration">
-            <atomic-numeric-range start="0" end="3" label="Short"></atomic-numeric-range>
-            <atomic-numeric-range start="3" end="10" label="Medium"></atomic-numeric-range>
-            <atomic-numeric-range start="10" end="60" label="Long"></atomic-numeric-range>
+          <atomic-numeric-range
+            start="0"
+            end="3"
+            label="Short"
+          ></atomic-numeric-range>
+          <atomic-numeric-range
+            start="3"
+            end="10"
+            label="Medium"
+          ></atomic-numeric-range>
+          <atomic-numeric-range
+            start="10"
+            end="60"
+            label="Long"
+          ></atomic-numeric-range>
         </atomic-numeric-facet>
         <atomic-numeric-facet field="ytvideoduration" label="Video duration">
-            <atomic-numeric-range start="0" end="300" label="Short"></atomic-numeric-range>
-            <atomic-numeric-range start="300" end="1200" label="Medium"></atomic-numeric-range>
-            <atomic-numeric-range start="1200" end="100000" label="Long"></atomic-numeric-range>
+          <atomic-numeric-range
+            start="0"
+            end="300"
+            label="Short"
+          ></atomic-numeric-range>
+          <atomic-numeric-range
+            start="300"
+            end="1200"
+            label="Medium"
+          ></atomic-numeric-range>
+          <atomic-numeric-range
+            start="1200"
+            end="100000"
+            label="Long"
+          ></atomic-numeric-range>
         </atomic-numeric-facet>
-        <atomic-facet field="year" label="Year" display-values-as="box"></atomic-facet>
-    </atomic-facet-manager>
-    <atomic-breadbox></atomic-breadbox>
-    <div class="topbar">
+        <atomic-facet
+          field="year"
+          label="Year"
+          display-values-as="box"
+        ></atomic-facet>
+      </atomic-facet-manager>
+      <atomic-breadbox></atomic-breadbox>
+      <div class="topbar">
         <atomic-query-summary enable-duration="false"></atomic-query-summary>
         <atomic-refine-toggle></atomic-refine-toggle>
         <atomic-sort-dropdown>
-            <atomic-sort-expression label="relevance" expression="relevancy"></atomic-sort-expression>
-            <atomic-sort-expression label="most-recent" expression="date descending"></atomic-sort-expression>
+          <atomic-sort-expression
+            label="relevance"
+            expression="relevancy"
+          ></atomic-sort-expression>
+          <atomic-sort-expression
+            label="most-recent"
+            expression="date descending"
+          ></atomic-sort-expression>
         </atomic-sort-dropdown>
-    </div>
-    <div class="results">
+      </div>
+      <div class="results">
         <atomic-did-you-mean></atomic-did-you-mean>
-        <atomic-result-list image-size="small" fields-to-include="title, description, concepts, excerpt, author, ytthumbnailurl, sourcetype, course_image">
-            <atomic-result-template must-match-source="Coveo - YouTube Playlists">
-                <template>
-                    <style>
-                        .field {
-                            display: inline-flex;
-                            white-space: nowrap;
-                            align-items: center;
-                        }
+        <atomic-result-list
+          image-size="small"
+          fields-to-include="title, description, concepts, excerpt, author, ytthumbnailurl, sourcetype, course_image"
+        >
+          <atomic-result-template must-match-source="Coveo - YouTube Playlists">
+            <template>
+              <style>
+                .field {
+                  display: inline-flex;
+                  white-space: nowrap;
+                  align-items: center;
+                }
 
-                        .field-label {
-                            font-weight: bold;
-                            margin-right: 0.25rem;
-                        }
+                .field-label {
+                  font-weight: bold;
+                  margin-right: 0.25rem;
+                }
 
-                        .tag {
-                            color: #4b4b4b;
-                            display: flex;
-                            align-items: center;
-                            padding: 10px;
-                            margin-top: 10px;
-                            font-size: var(--atomic-text-base);
-                            font-weight: var(--atomic-font-normal);
-                            border-radius: var(--atomic-border-radius-md);
-                        }
+                .tag {
+                  color: #4b4b4b;
+                  display: flex;
+                  align-items: center;
+                  padding: 10px;
+                  margin-top: 10px;
+                  font-size: var(--atomic-text-base);
+                  font-weight: var(--atomic-font-normal);
+                  border-radius: var(--atomic-border-radius-md);
+                }
 
-                        .tag .label {
-                            flex-grow: 1;
-                            margin-left: 10px;
-                        }
+                .tag .label {
+                  flex-grow: 1;
+                  margin-left: 10px;
+                }
 
-                        .tag svg {
-                            width: 30px;
-                        }
+                .tag svg {
+                  width: 30px;
+                }
 
-                        .featured {
-                            border: 1px solid #12c7ae;
-                        }
+                .featured {
+                  border: 1px solid #12c7ae;
+                }
 
-                        .featured svg {
-                            color: #12c7ae;
-                        }
+                .featured svg {
+                  color: #12c7ae;
+                }
 
-                        .boosted {
-                            border: 1px solid #ffb900;
-                        }
+                .boosted {
+                  border: 1px solid #ffb900;
+                }
 
-                        .boosted svg {
-                            color: #ffb900;
-                        }
-                    </style>
-                    <atomic-result-section-visual image-size="large">
-                        <atomic-result-image field="ytthumbnailurl"></atomic-result-image>
-                    </atomic-result-section-visual>
+                .boosted svg {
+                  color: #ffb900;
+                }
+              </style>
+              <atomic-result-section-visual image-size="large">
+                <atomic-result-image
+                  field="ytthumbnailurl"
+                ></atomic-result-image>
+              </atomic-result-section-visual>
 
-                    <atomic-result-section-badges>
-                        <atomic-result-badge field="source"></atomic-result-badge>
-                    </atomic-result-section-badges>
+              <atomic-result-section-badges>
+                <atomic-result-badge field="source"></atomic-result-badge>
+              </atomic-result-section-badges>
 
-                    <atomic-result-section-title>
-                        <atomic-result-link></atomic-result-link>
-                    </atomic-result-section-title>
+              <atomic-result-section-title>
+                <atomic-result-link></atomic-result-link>
+              </atomic-result-section-title>
 
-                    <atomic-result-section-title-metadata>
-                        <atomic-result-printable-uri></atomic-result-printable-uri>
-                    </atomic-result-section-title-metadata>
+              <atomic-result-section-title-metadata>
+                <atomic-result-printable-uri></atomic-result-printable-uri>
+              </atomic-result-section-title-metadata>
 
-                    <atomic-result-section-emphasized>
-                        <atomic-field-condition must-match-is-top-result="true" must-match-is-recommendation="false">
-                            <div class="tag featured">
-                                <svg viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.18117 18.8795L3.01674 15.11C1.78554 13.9955 2.37034 11.9529 4.00477 11.6588L10.4969 10.4908C11.1271 10.3774 11.6649 9.96921 11.9435 9.39275L14.1993 4.72558C14.9273 3.21936 17.0727 3.21936 17.8007 4.72558L20.0565 9.39274C20.3351 9.96921 20.8729 10.3774 21.5031 10.4908L27.9952 11.6588C29.6297 11.9529 30.2145 13.9955 28.9833 15.11L24.8188 18.8795C24.3092 19.3408 24.0722 20.0315 24.1912 20.7085L25.3008 27.0215C25.5873 28.6519 23.8824 29.9047 22.4121 29.1442L16.9188 26.3029C16.3425 26.0048 15.6575 26.0048 15.0812 26.3029L9.5879 29.1442C8.11762 29.9047 6.4127 28.6519 6.69924 27.0215L7.80881 20.7085C7.9278 20.0315 7.69078 19.3408 7.18117 18.8795Z" stroke="currentColor"/>
-                                </svg>
+              <atomic-result-section-emphasized>
+                <atomic-field-condition
+                  must-match-is-top-result="true"
+                  must-match-is-recommendation="false"
+                >
+                  <div class="tag featured">
+                    <svg
+                      viewbox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.18117 18.8795L3.01674 15.11C1.78554 13.9955 2.37034 11.9529 4.00477 11.6588L10.4969 10.4908C11.1271 10.3774 11.6649 9.96921 11.9435 9.39275L14.1993 4.72558C14.9273 3.21936 17.0727 3.21936 17.8007 4.72558L20.0565 9.39274C20.3351 9.96921 20.8729 10.3774 21.5031 10.4908L27.9952 11.6588C29.6297 11.9529 30.2145 13.9955 28.9833 15.11L24.8188 18.8795C24.3092 19.3408 24.0722 20.0315 24.1912 20.7085L25.3008 27.0215C25.5873 28.6519 23.8824 29.9047 22.4121 29.1442L16.9188 26.3029C16.3425 26.0048 15.6575 26.0048 15.0812 26.3029L9.5879 29.1442C8.11762 29.9047 6.4127 28.6519 6.69924 27.0215L7.80881 20.7085C7.9278 20.0315 7.69078 19.3408 7.18117 18.8795Z"
+                        stroke="currentColor"
+                      />
+                    </svg>
 
-                                <span class="label">Featured result</span>
-                                <span>Item score:
-                                    <atomic-result-number field="score"></atomic-result-number>
-                                </span>
-                            </div>
-                        </atomic-field-condition>
-                        <atomic-field-condition must-match-is-recommendation="true">
-                            <div class="tag boosted">
-                                <svg viewbox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.68165 10.9046L8.69644 1.43468C9.27026 0.660027 10.5 1.06588 10.5 2.02991V8.49988C10.5 9.05216 10.9477 9.49988 11.5 9.49988H15.5148C16.3361 9.49988 16.8072 10.4351 16.3183 11.0951L9.30356 20.5651C8.72974 21.3397 7.5 20.9339 7.5 19.9698V13.4999C7.5 12.9476 7.05228 12.4999 6.5 12.4999H2.48521C1.6639 12.4999 1.19279 11.5646 1.68165 10.9046Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="label">Ranking powered by machine learning</span>
-                                <span>
-                                    Item score:
-                                    <atomic-result-number field="score"></atomic-result-number>
-                                </span>
-                            </div>
-                        </atomic-field-condition>
-                    </atomic-result-section-emphasized>
+                    <span class="label">Featured result</span>
+                    <span
+                      >Item score:
+                      <atomic-result-number
+                        field="score"
+                      ></atomic-result-number>
+                    </span>
+                  </div>
+                </atomic-field-condition>
+                <atomic-field-condition must-match-is-recommendation="true">
+                  <div class="tag boosted">
+                    <svg
+                      viewbox="0 0 18 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.68165 10.9046L8.69644 1.43468C9.27026 0.660027 10.5 1.06588 10.5 2.02991V8.49988C10.5 9.05216 10.9477 9.49988 11.5 9.49988H15.5148C16.3361 9.49988 16.8072 10.4351 16.3183 11.0951L9.30356 20.5651C8.72974 21.3397 7.5 20.9339 7.5 19.9698V13.4999C7.5 12.9476 7.05228 12.4999 6.5 12.4999H2.48521C1.6639 12.4999 1.19279 11.5646 1.68165 10.9046Z"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="label"
+                      >Ranking powered by machine learning</span
+                    >
+                    <span>
+                      Item score:
+                      <atomic-result-number
+                        field="score"
+                      ></atomic-result-number>
+                    </span>
+                  </div>
+                </atomic-field-condition>
+              </atomic-result-section-emphasized>
 
-                    <atomic-result-section-excerpt>
-                        <atomic-result-text field="excerpt"></atomic-result-text>
-                    </atomic-result-section-excerpt>
+              <atomic-result-section-excerpt>
+                <atomic-result-text field="excerpt"></atomic-result-text>
+              </atomic-result-section-excerpt>
 
-                    <atomic-result-section-bottom-metadata>
-                        <atomic-result-fields-list>
-                            <span class="field">
-                                <span class="field-label">
-                                    <atomic-text value="source"></atomic-text>:
-                                </span>
-                                <atomic-result-text field="source"></atomic-result-text>
-                            </span>
+              <atomic-result-section-bottom-metadata>
+                <atomic-result-fields-list>
+                  <span class="field">
+                    <span class="field-label">
+                      <atomic-text value="source"></atomic-text>:
+                    </span>
+                    <atomic-result-text field="source"></atomic-result-text>
+                  </span>
 
-                            <span class="field">
-                                <span class="field-label">
-                                    <atomic-text value="language"></atomic-text>:
-                                </span>
-                                <atomic-result-multi-value-text field="language"></atomic-result-multi-value-text>
-                            </span>
+                  <span class="field">
+                    <span class="field-label">
+                      <atomic-text value="language"></atomic-text>:
+                    </span>
+                    <atomic-result-multi-value-text
+                      field="language"
+                    ></atomic-result-multi-value-text>
+                  </span>
 
-                            <span class="field">
-                                <span class="field-label">
-                                    Date:
-                                </span>
-                                <atomic-result-date></atomic-result-date>
-                            </span>
+                  <span class="field">
+                    <span class="field-label"> Date: </span>
+                    <atomic-result-date></atomic-result-date>
+                  </span>
 
-                            <span class="field">
-                                <span class="field-label">
-                                    Topics:
-                                </span>
-                                <atomic-result-multi-value-text field="concepts"></atomic-result-multi-value-text>
-                            </span>
-                        </atomic-result-fields-list>
-                    </atomic-result-section-bottom-metadata>
-                </template>
-            </atomic-result-template>
-            <atomic-result-template>
-                <template>
-                    <style>
-                        .field {
-                            display: inline-flex;
-                            white-space: nowrap;
-                            align-items: center;
-                        }
+                  <span class="field">
+                    <span class="field-label"> Topics: </span>
+                    <atomic-result-multi-value-text
+                      field="concepts"
+                    ></atomic-result-multi-value-text>
+                  </span>
+                </atomic-result-fields-list>
+              </atomic-result-section-bottom-metadata>
+            </template>
+          </atomic-result-template>
+          <atomic-result-template>
+            <template>
+              <style>
+                .field {
+                  display: inline-flex;
+                  white-space: nowrap;
+                  align-items: center;
+                }
 
-                        .field-label {
-                            font-weight: bold;
-                            margin-right: 0.25rem;
-                        }
+                .field-label {
+                  font-weight: bold;
+                  margin-right: 0.25rem;
+                }
 
-                        .tag {
-                            color: #4b4b4b;
-                            display: flex;
-                            align-items: center;
-                            padding: 10px;
-                            margin-top: 10px;
-                            font-size: var(--atomic-text-base);
-                            font-weight: var(--atomic-font-normal);
-                            border-radius: var(--atomic-border-radius-md);
-                        }
+                .tag {
+                  color: #4b4b4b;
+                  display: flex;
+                  align-items: center;
+                  padding: 10px;
+                  margin-top: 10px;
+                  font-size: var(--atomic-text-base);
+                  font-weight: var(--atomic-font-normal);
+                  border-radius: var(--atomic-border-radius-md);
+                }
 
-                        .tag .label {
-                            flex-grow: 1;
-                            margin-left: 10px;
-                        }
+                .tag .label {
+                  flex-grow: 1;
+                  margin-left: 10px;
+                }
 
-                        .tag svg {
-                            width: 30px;
-                        }
+                .tag svg {
+                  width: 30px;
+                }
 
-                        .featured {
-                            border: 1px solid #12c7ae;
-                        }
+                .featured {
+                  border: 1px solid #12c7ae;
+                }
 
-                        .featured svg {
-                            color: #12c7ae;
-                        }
+                .featured svg {
+                  color: #12c7ae;
+                }
 
-                        .boosted {
-                            border: 1px solid #ffb900;
-                        }
+                .boosted {
+                  border: 1px solid #ffb900;
+                }
 
-                        .boosted svg {
-                            color: #ffb900;
-                        }
-                    </style>
-                    <atomic-result-section-visual>
-                        <atomic-field-condition must-match-source="Coveo - Academy Courses">
-                            <atomic-result-image field="course_image"></atomic-result-image>
-                        </atomic-field-condition>
-                    </atomic-result-section-visual>
+                .boosted svg {
+                  color: #ffb900;
+                }
+              </style>
+              <atomic-result-section-visual>
+                <atomic-field-condition
+                  must-match-source="Coveo - Academy Courses"
+                >
+                  <atomic-result-image
+                    field="course_image"
+                  ></atomic-result-image>
+                </atomic-field-condition>
+              </atomic-result-section-visual>
 
-                    <atomic-result-section-badges>
-                        <atomic-result-badge field="source"></atomic-result-badge>
-                    </atomic-result-section-badges>
+              <atomic-result-section-badges>
+                <atomic-result-badge field="source"></atomic-result-badge>
+              </atomic-result-section-badges>
 
-                    <atomic-result-section-title>
-                        <atomic-result-link></atomic-result-link>
-                    </atomic-result-section-title>
+              <atomic-result-section-title>
+                <atomic-result-link></atomic-result-link>
+              </atomic-result-section-title>
 
-                    <atomic-result-section-title-metadata>
-                        <atomic-result-printable-uri></atomic-result-printable-uri>
-                    </atomic-result-section-title-metadata>
+              <atomic-result-section-title-metadata>
+                <atomic-result-printable-uri></atomic-result-printable-uri>
+              </atomic-result-section-title-metadata>
 
-                    <atomic-result-section-emphasized>
-                        <atomic-field-condition must-match-is-top-result="true" must-match-is-recommendation="false">
-                            <div class="tag featured">
-                                <svg viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.18117 18.8795L3.01674 15.11C1.78554 13.9955 2.37034 11.9529 4.00477 11.6588L10.4969 10.4908C11.1271 10.3774 11.6649 9.96921 11.9435 9.39275L14.1993 4.72558C14.9273 3.21936 17.0727 3.21936 17.8007 4.72558L20.0565 9.39274C20.3351 9.96921 20.8729 10.3774 21.5031 10.4908L27.9952 11.6588C29.6297 11.9529 30.2145 13.9955 28.9833 15.11L24.8188 18.8795C24.3092 19.3408 24.0722 20.0315 24.1912 20.7085L25.3008 27.0215C25.5873 28.6519 23.8824 29.9047 22.4121 29.1442L16.9188 26.3029C16.3425 26.0048 15.6575 26.0048 15.0812 26.3029L9.5879 29.1442C8.11762 29.9047 6.4127 28.6519 6.69924 27.0215L7.80881 20.7085C7.9278 20.0315 7.69078 19.3408 7.18117 18.8795Z" stroke="currentColor"/>
-                                </svg>
+              <atomic-result-section-emphasized>
+                <atomic-field-condition
+                  must-match-is-top-result="true"
+                  must-match-is-recommendation="false"
+                >
+                  <div class="tag featured">
+                    <svg
+                      viewbox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.18117 18.8795L3.01674 15.11C1.78554 13.9955 2.37034 11.9529 4.00477 11.6588L10.4969 10.4908C11.1271 10.3774 11.6649 9.96921 11.9435 9.39275L14.1993 4.72558C14.9273 3.21936 17.0727 3.21936 17.8007 4.72558L20.0565 9.39274C20.3351 9.96921 20.8729 10.3774 21.5031 10.4908L27.9952 11.6588C29.6297 11.9529 30.2145 13.9955 28.9833 15.11L24.8188 18.8795C24.3092 19.3408 24.0722 20.0315 24.1912 20.7085L25.3008 27.0215C25.5873 28.6519 23.8824 29.9047 22.4121 29.1442L16.9188 26.3029C16.3425 26.0048 15.6575 26.0048 15.0812 26.3029L9.5879 29.1442C8.11762 29.9047 6.4127 28.6519 6.69924 27.0215L7.80881 20.7085C7.9278 20.0315 7.69078 19.3408 7.18117 18.8795Z"
+                        stroke="currentColor"
+                      />
+                    </svg>
 
-                                <span class="label">Featured result</span>
-                                <span>Item score:
-                                    <atomic-result-number field="score"></atomic-result-number>
-                                </span>
-                            </div>
-                        </atomic-field-condition>
-                        <atomic-field-condition must-match-is-recommendation="true">
-                            <div class="tag boosted">
-                                <svg viewbox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.68165 10.9046L8.69644 1.43468C9.27026 0.660027 10.5 1.06588 10.5 2.02991V8.49988C10.5 9.05216 10.9477 9.49988 11.5 9.49988H15.5148C16.3361 9.49988 16.8072 10.4351 16.3183 11.0951L9.30356 20.5651C8.72974 21.3397 7.5 20.9339 7.5 19.9698V13.4999C7.5 12.9476 7.05228 12.4999 6.5 12.4999H2.48521C1.6639 12.4999 1.19279 11.5646 1.68165 10.9046Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="label">Ranking powered by machine learning</span>
-                                <span>
-                                    Item score:
-                                    <atomic-result-number field="score"></atomic-result-number>
-                                </span>
-                            </div>
-                        </atomic-field-condition>
-                    </atomic-result-section-emphasized>
+                    <span class="label">Featured result</span>
+                    <span
+                      >Item score:
+                      <atomic-result-number
+                        field="score"
+                      ></atomic-result-number>
+                    </span>
+                  </div>
+                </atomic-field-condition>
+                <atomic-field-condition must-match-is-recommendation="true">
+                  <div class="tag boosted">
+                    <svg
+                      viewbox="0 0 18 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.68165 10.9046L8.69644 1.43468C9.27026 0.660027 10.5 1.06588 10.5 2.02991V8.49988C10.5 9.05216 10.9477 9.49988 11.5 9.49988H15.5148C16.3361 9.49988 16.8072 10.4351 16.3183 11.0951L9.30356 20.5651C8.72974 21.3397 7.5 20.9339 7.5 19.9698V13.4999C7.5 12.9476 7.05228 12.4999 6.5 12.4999H2.48521C1.6639 12.4999 1.19279 11.5646 1.68165 10.9046Z"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="label"
+                      >Ranking powered by machine learning</span
+                    >
+                    <span>
+                      Item score:
+                      <atomic-result-number
+                        field="score"
+                      ></atomic-result-number>
+                    </span>
+                  </div>
+                </atomic-field-condition>
+              </atomic-result-section-emphasized>
 
-                    <atomic-result-section-excerpt>
-                        <atomic-result-text field="excerpt"></atomic-result-text>
-                    </atomic-result-section-excerpt>
+              <atomic-result-section-excerpt>
+                <atomic-result-text field="excerpt"></atomic-result-text>
+              </atomic-result-section-excerpt>
 
-                    <atomic-result-section-bottom-metadata>
-                        <atomic-result-fields-list>
-                            <span class="field">
-                                <span class="field-label">
-                                    <atomic-text value="source"></atomic-text>:
-                                </span>
-                                <atomic-result-text field="source"></atomic-result-text>
-                            </span>
+              <atomic-result-section-bottom-metadata>
+                <atomic-result-fields-list>
+                  <span class="field">
+                    <span class="field-label">
+                      <atomic-text value="source"></atomic-text>:
+                    </span>
+                    <atomic-result-text field="source"></atomic-result-text>
+                  </span>
 
-                            <span class="field">
-                                <span class="field-label">
-                                    <atomic-text value="language"></atomic-text>:
-                                </span>
-                                <atomic-result-multi-value-text field="language"></atomic-result-multi-value-text>
-                            </span>
+                  <span class="field">
+                    <span class="field-label">
+                      <atomic-text value="language"></atomic-text>:
+                    </span>
+                    <atomic-result-multi-value-text
+                      field="language"
+                    ></atomic-result-multi-value-text>
+                  </span>
 
-                            <span class="field">
-                                <span class="field-label">
-                                    Date:
-                                </span>
-                                <atomic-result-date></atomic-result-date>
-                            </span>
+                  <span class="field">
+                    <span class="field-label"> Date: </span>
+                    <atomic-result-date></atomic-result-date>
+                  </span>
 
-                            <span class="field">
-                                <span class="field-label">
-                                    Topics:
-                                </span>
-                                <atomic-result-multi-value-text field="concepts"></atomic-result-multi-value-text>
-                            </span>
-                        </atomic-result-fields-list>
-                    </atomic-result-section-bottom-metadata>
-                </template>
-            </atomic-result-template>
+                  <span class="field">
+                    <span class="field-label"> Topics: </span>
+                    <atomic-result-multi-value-text
+                      field="concepts"
+                    ></atomic-result-multi-value-text>
+                  </span>
+                </atomic-result-fields-list>
+              </atomic-result-section-bottom-metadata>
+            </template>
+          </atomic-result-template>
         </atomic-result-list>
-    </div>
-    <div class="pagination">
+      </div>
+      <div class="pagination">
         <atomic-load-more-results></atomic-load-more-results>
-    </div>
-    <div class="status">
+      </div>
+      <div class="status">
         <atomic-query-error></atomic-query-error>
         <atomic-no-results></atomic-no-results>
-    </div>
-</atomic-search-interface></body></html>
+      </div>
+    </atomic-search-interface>
+  </body>
+</html>
