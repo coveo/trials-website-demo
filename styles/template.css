@@ -11,12 +11,16 @@
 
 .featured::part(result-badge-element) {
   background-color: white;
-  border: 1px solid var(--trial-magenta);
-  color: var(--trial-magenta);
+  border: 1px solid var(--trial-purple);
+  color: var(--trial-purple);
 }
 
 .recommended::part(result-badge-element) {
   background-color: white;
-  border: 1px solid var(--trial-purple);
-  color: var(--trial-purple);
+  border: 1px solid var(--trial-magenta);
+  color: var(--trial-magenta);
+}
+
+atomic-result-printable-uri {
+  --atomic-primary: var(--trial-blue);
 }
