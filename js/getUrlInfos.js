@@ -22,8 +22,13 @@ function queryParamsFromUrl() {
 
 function setUserInformationInLocalStorage() {
     const queryParam = queryParamsFromUrl()
-    localStorage.setItem('organizationId', queryParam.orgId)
-    localStorage.setItem('userId', queryParam.userId)
+
+    if(queryParam.orgId) {
+        localStorage.setItem('organizationId', queryParam.orgId)
+    }
+    if(queryParam.userId) {
+        localStorage.setItem('userId', queryParam.userId)
+    }
     if(queryParam.fromCoveoDev) {
         localStorage.setItem('coveoDev', 'true')
     }

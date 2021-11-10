@@ -1,0 +1,19 @@
+{
+  "name": "trials-website-demo",
+  "version": "1.0.0",
+  "description": "Demo page for coveo trial",
+  "author": "Coveo Solutions Inc.",
+  "license": "SEE LICENSE IN <LICENSE>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify js/* -p esmify > bundle.js"
+  },
+  "dependencies": {
+    "amplitude-js": "^8.3.0"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "esmify": "^2.1.1"
+  }
+}
