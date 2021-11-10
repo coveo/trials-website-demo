@@ -45,13 +45,20 @@
 
       redirectToPlatform = () => {
         const orgId = localStorage.getItem("organizationId");
+        const fromDev = localStorage.getItem("coveoDev");
+
         if (orgId === undefined || orgId === null) {
           window.open("https://platform.cloud.coveo.com/login", "_blank");
         } else {
-          window.open(
-            `https://platform.cloud.coveo.com/admin/#${orgId}/home/`,
-            "_blank"
-          );
+          fromDev === 'true'
+            ? window.open(
+                `https://platformdev.cloud.coveo.com/admin/#${orgId}/home/`,
+                "_blank"
+              )
+            : window.open(
+                `https://platform.cloud.coveo.com/admin/#${orgId}/home/`,
+                "_blank"
+              );
         }
       };
     </script>
@@ -295,7 +302,9 @@
                 <atomic-field-condition
                   must-match-source="Coveo - Academy Courses"
                 >
-                  <atomic-result-image field="course_image"></atomic-result-image>
+                  <atomic-result-image
+                    field="course_image"
+                  ></atomic-result-image>
                   <atomic-field-condition if-not-defined="course_image">
                     <img src="./images/placeholder.png" alt="Academy" />
                   </atomic-field-condition>
