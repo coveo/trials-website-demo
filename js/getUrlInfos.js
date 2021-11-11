@@ -8,7 +8,7 @@ function cleanUrlFromHiddenQueryParams() {
     if(remainingParams) {
         const fixedRemainingParams = remainingParams.replace(remainingParamOperatorMatcher, '?')
         const newUrlWithoutHiddenParams = baseUrl.concat(fixedRemainingParams)
-    
+
         history.replaceState(null, document.title, newUrlWithoutHiddenParams)
     } else if(baseUrl) {
         history.replaceState(null, document.title, baseUrl)

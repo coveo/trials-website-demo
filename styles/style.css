@@ -56,6 +56,18 @@ body {
   right: 32px;
 }
 
+.btn-fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.btn-fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
 .restart-tour {
   position: fixed;
   bottom: 111px;
