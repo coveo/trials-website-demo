@@ -87,6 +87,10 @@ body {
   align-items: center;
 }
 
+.restart-tour-btn-height {
+  height: 17px;
+}
+
 .floating-button-text {
   margin-right: 12px;
 }
