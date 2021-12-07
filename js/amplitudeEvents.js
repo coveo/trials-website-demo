@@ -9,9 +9,9 @@ function amplitudeInit(isFromCoveoDev, userId) {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-const userId = localStorage.getItem('userId')
-const isFromCoveoDev = localStorage.getItem('coveoDev')
-if(userId) {
-    amplitudeInit(isFromCoveoDev, userId)
-}
+    const userId = localStorage.getItem('userId')
+    const isFromCoveoDev = localStorage.getItem('coveoDev')
+    if(userId) {
+        amplitudeInit(isFromCoveoDev, userId)
+    }
 })
