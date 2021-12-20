@@ -12,7 +12,7 @@
     "watch": "watch 'npm run build' ./js ./styles"
   },
   "dependencies": {
-    "amplitude-js": "^8.3.0"
+    "amplitude-js": "^8.13.1"
   },
   "devDependencies": {
     "browserify": "^17.0.0",
