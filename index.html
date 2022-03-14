@@ -151,314 +151,314 @@
       <div class="logo">
         <img src="./images/logo.svg" alt="Learning Center" />
       </div>
-      <atomic-search-box></atomic-search-box>
-      <atomic-facet-manager>
-        <atomic-facet
-          field="source"
-          label="Content type"
-          display-values-as="link"
-        ></atomic-facet>
-        <atomic-facet field="author" label="Author"></atomic-facet>
-        <atomic-facet field="concepts" label="Topics"></atomic-facet>
-        <atomic-numeric-facet field="course_duration" label="Course duration">
-          <atomic-numeric-range
-            start="0"
-            end="3"
-            label="Short"
-          ></atomic-numeric-range>
-          <atomic-numeric-range
-            start="3"
-            end="10"
-            label="Medium"
-          ></atomic-numeric-range>
-          <atomic-numeric-range
-            start="10"
-            end="60"
-            label="Long"
-          ></atomic-numeric-range>
-        </atomic-numeric-facet>
-        <atomic-numeric-facet field="ytvideoduration" label="Video duration">
-          <atomic-numeric-range
-            start="0"
-            end="300"
-            label="Short"
-          ></atomic-numeric-range>
-          <atomic-numeric-range
-            start="300"
-            end="1200"
-            label="Medium"
-          ></atomic-numeric-range>
-          <atomic-numeric-range
-            start="1200"
-            end="100000"
-            label="Long"
-          ></atomic-numeric-range>
-        </atomic-numeric-facet>
-        <atomic-facet
-          field="year"
-          label="Year"
-          display-values-as="box"
-        ></atomic-facet>
-      </atomic-facet-manager>
-      <atomic-breadbox></atomic-breadbox>
-      <div class="topbar">
-        <atomic-query-summary enable-duration="false"></atomic-query-summary>
-        <atomic-refine-toggle></atomic-refine-toggle>
-        <atomic-sort-dropdown>
-          <atomic-sort-expression
-            label="relevance"
-            expression="relevancy"
-          ></atomic-sort-expression>
-          <atomic-sort-expression
-            label="most-recent"
-            expression="date descending"
-          ></atomic-sort-expression>
-        </atomic-sort-dropdown>
-      </div>
-      <div class="results">
-        <atomic-did-you-mean></atomic-did-you-mean>
-        <atomic-result-list
-          image-size="small"
-          fields-to-include="title, description, concepts, excerpt, author, ytthumbnailurl, sourcetype, course_image"
-        >
-        <atomic-result-template must-match-source="Coveo - Docs">
-          <template>
-            <style>
-              @import "styles/template.css";
-            </style>
-            <atomic-result-section-badges>
-              <atomic-result-badge field="source"></atomic-result-badge>
-              <atomic-field-condition must-match-is-top-result="true">
-                <atomic-result-badge
-                  class="featured"
-                  label="Featured result"
-                  icon="./images/featured.svg"
-                ></atomic-result-badge>
-              </atomic-field-condition>
-              <atomic-field-condition must-match-is-recommendation="true">
-                <atomic-result-badge
-                  class="recommended"
-                  label="Powered by machine learning"
-                  icon="./images/recommended.svg"
-                ></atomic-result-badge>
-              </atomic-field-condition>
-            </atomic-result-section-badges>
-
-            <atomic-result-section-title>
-              <atomic-result-link></atomic-result-link>
-            </atomic-result-section-title>
-
-            <atomic-result-section-title-metadata>
-              <atomic-result-printable-uri></atomic-result-printable-uri>
-            </atomic-result-section-title-metadata>
-
-            <atomic-result-section-excerpt>
-              <atomic-result-text field="excerpt"></atomic-result-text>
-            </atomic-result-section-excerpt>
-
-            <atomic-result-section-bottom-metadata>
-              <atomic-result-fields-list>
-                <span class="field">
-                  <span class="field-label">
-                    <atomic-text value="source"></atomic-text>:
-                  </span>
-                  <atomic-result-text field="source"></atomic-result-text>
-                </span>
-
-                <span class="field">
-                  <span class="field-label">
-                    <atomic-text value="language"></atomic-text>:
-                  </span>
-                  <atomic-result-multi-value-text
-                    field="language"
-                  ></atomic-result-multi-value-text>
-                </span>
-
-                <span class="field">
-                  <span class="field-label"> Date: </span>
-                  <atomic-result-date></atomic-result-date>
-                </span>
-
-                <span class="field">
-                  <span class="field-label"> Topics: </span>
-                  <atomic-result-multi-value-text
-                    delimiter=";"
-                    max-values-to-display="3"
-                    field="concepts"
-                  ></atomic-result-multi-value-text>
-                </span>
-              </atomic-result-fields-list>
-            </atomic-result-section-bottom-metadata>
-          </template>
-        </atomic-result-template>
-          <atomic-result-template must-match-source="Coveo - YouTube Playlists">
-            <template>
-              <style>
-                @import "styles/template.css";
-              </style>
-              <atomic-result-section-visual image-size="large" id="yt-visual">
-                <atomic-result-image
-                  field="ytthumbnailurl"
-                ></atomic-result-image>
-              </atomic-result-section-visual>
-
-              <atomic-result-section-badges>
-                <atomic-result-badge field="source"></atomic-result-badge>
-                <atomic-field-condition must-match-is-top-result="true">
-                  <atomic-result-badge
-                    class="featured"
-                    label="Featured result"
-                    icon="./images/featured.svg"
-                  ></atomic-result-badge>
-                </atomic-field-condition>
-                <atomic-field-condition must-match-is-recommendation="true">
-                  <atomic-result-badge
-                    class="recommended"
-                    label="Powered by machine learning"
-                    icon="./images/recommended.svg"
-                  ></atomic-result-badge>
-                </atomic-field-condition>
-              </atomic-result-section-badges>
-
-              <atomic-result-section-title>
-                <atomic-result-link></atomic-result-link>
-              </atomic-result-section-title>
-
-              <atomic-result-section-title-metadata>
-                <atomic-result-printable-uri></atomic-result-printable-uri>
-              </atomic-result-section-title-metadata>
-
-              <atomic-result-section-excerpt>
-                <atomic-result-text field="excerpt"></atomic-result-text>
-              </atomic-result-section-excerpt>
-
-              <atomic-result-section-bottom-metadata>
-                <atomic-result-fields-list>
-                  <span class="field">
-                    <span class="field-label">
-                      <atomic-text value="source"></atomic-text>:
-                    </span>
-                    <atomic-result-text field="source"></atomic-result-text>
-                  </span>
-
-                  <span class="field">
-                    <span class="field-label">
-                      <atomic-text value="language"></atomic-text>:
-                    </span>
-                    <atomic-result-multi-value-text
-                      field="language"
-                    ></atomic-result-multi-value-text>
-                  </span>
-
-                  <span class="field">
-                    <span class="field-label"> Date: </span>
-                    <atomic-result-date></atomic-result-date>
-                  </span>
-
-                  <span class="field">
-                    <span class="field-label"> Topics: </span>
-                    <atomic-result-multi-value-text
-                      delimiter=";"
-                      max-values-to-display="3"
-                      field="concepts"
-                    ></atomic-result-multi-value-text>
-                  </span>
-                </atomic-result-fields-list>
-              </atomic-result-section-bottom-metadata>
-            </template>
-          </atomic-result-template>
-          <atomic-result-template>
-            <template>
-              <style>
-                @import "styles/template.css";
-              </style>
-              <atomic-result-section-visual>
-                <atomic-field-condition
-                  must-match-source="Coveo - Level Up Courses"
-                >
-                  <atomic-result-image
-                    field="course_image"
-                  ></atomic-result-image>
-                  <atomic-field-condition if-not-defined="course_image">
-                    <img src="./images/placeholder.png" alt="Academy" />
+      <atomic-search-layout>
+        <atomic-layout-section section="search">
+          <atomic-search-box></atomic-search-box>
+        </atomic-layout-section>
+        <atomic-layout-section section="facets">
+          <atomic-facet-manager>
+            <atomic-facet
+              field="source"
+              label="Content type"
+              display-values-as="link"
+            ></atomic-facet>
+            <atomic-facet field="author" label="Author"></atomic-facet>
+            <atomic-facet field="concepts" label="Topics"></atomic-facet>
+            <atomic-numeric-facet field="course_duration" label="Course duration">
+              <atomic-numeric-range
+                start="0"
+                end="3"
+                label="Short"
+              ></atomic-numeric-range>
+              <atomic-numeric-range
+                start="3"
+                end="10"
+                label="Medium"
+              ></atomic-numeric-range>
+              <atomic-numeric-range
+                start="10"
+                end="60"
+                label="Long"
+              ></atomic-numeric-range>
+            </atomic-numeric-facet>
+            <atomic-numeric-facet field="ytvideoduration" label="Video duration">
+              <atomic-numeric-range
+                start="0"
+                end="300"
+                label="Short"
+              ></atomic-numeric-range>
+              <atomic-numeric-range
+                start="300"
+                end="1200"
+                label="Medium"
+              ></atomic-numeric-range>
+              <atomic-numeric-range
+                start="1200"
+                end="100000"
+                label="Long"
+              ></atomic-numeric-range>
+            </atomic-numeric-facet>
+            <atomic-facet
+              field="year"
+              label="Year"
+              display-values-as="box"
+            ></atomic-facet>
+          </atomic-facet-manager>
+        </atomic-layout-section>
+        <atomic-layout-section section="main">
+          <atomic-layout-section section="status">
+            <atomic-breadbox></atomic-breadbox>
+            <atomic-query-summary></atomic-query-summary>
+            <atomic-refine-toggle></atomic-refine-toggle>
+            <atomic-sort-dropdown>
+              <atomic-sort-expression label="relevance" expression="relevancy"></atomic-sort-expression>
+              <atomic-sort-expression label="most-recent" expression="date descending"></atomic-sort-expression>
+            </atomic-sort-dropdown>
+            <atomic-did-you-mean></atomic-did-you-mean>
+          </atomic-layout-section>
+          <atomic-layout-section section="results">
+            <atomic-result-list
+              image-size="small"
+              fields-to-include="title, description, concepts, excerpt, author, ytthumbnailurl, sourcetype, course_image"
+            >
+            <atomic-result-template must-match-source="Coveo - Docs">
+              <template>
+                <style>
+                  @import "styles/template.css";
+                </style>
+                <atomic-result-section-badges>
+                  <atomic-result-badge field="source"></atomic-result-badge>
+                  <atomic-field-condition must-match-is-top-result="true">
+                    <atomic-result-badge
+                      class="featured"
+                      label="Featured result"
+                      icon="./images/featured.svg"
+                    ></atomic-result-badge>
                   </atomic-field-condition>
-                </atomic-field-condition>
-              </atomic-result-section-visual>
+                  <atomic-field-condition must-match-is-recommendation="true">
+                    <atomic-result-badge
+                      class="recommended"
+                      label="Powered by machine learning"
+                      icon="./images/recommended.svg"
+                    ></atomic-result-badge>
+                  </atomic-field-condition>
+                </atomic-result-section-badges>
 
-              <atomic-result-section-badges>
-                <atomic-result-badge field="source"></atomic-result-badge>
-                <atomic-field-condition must-match-is-top-result="true">
-                  <atomic-result-badge
-                    class="featured"
-                    label="Featured result"
-                    icon="./images/featured.svg"
-                  ></atomic-result-badge>
-                </atomic-field-condition>
-                <atomic-field-condition must-match-is-recommendation="true">
-                  <atomic-result-badge
-                    class="recommended"
-                    label="Powered by machine learning"
-                    icon="./images/recommended.svg"
-                  ></atomic-result-badge>
-                </atomic-field-condition>
-              </atomic-result-section-badges>
+                <atomic-result-section-title>
+                  <atomic-result-link></atomic-result-link>
+                </atomic-result-section-title>
 
-              <atomic-result-section-title>
-                <atomic-result-link></atomic-result-link>
-              </atomic-result-section-title>
+                <atomic-result-section-title-metadata>
+                  <atomic-result-printable-uri></atomic-result-printable-uri>
+                </atomic-result-section-title-metadata>
 
-              <atomic-result-section-title-metadata>
-                <atomic-result-printable-uri></atomic-result-printable-uri>
-              </atomic-result-section-title-metadata>
+                <atomic-result-section-excerpt>
+                  <atomic-result-text field="excerpt"></atomic-result-text>
+                </atomic-result-section-excerpt>
 
-              <atomic-result-section-excerpt>
-                <atomic-result-text field="description"></atomic-result-text>
-              </atomic-result-section-excerpt>
-
-              <atomic-result-section-bottom-metadata>
-                <atomic-result-fields-list>
-                  <span class="field">
-                    <span class="field-label">
-                      <atomic-text value="source"></atomic-text>:
+                <atomic-result-section-bottom-metadata>
+                  <atomic-result-fields-list>
+                    <span class="field">
+                      <span class="field-label">
+                        <atomic-text value="source"></atomic-text>:
+                      </span>
+                      <atomic-result-text field="source"></atomic-result-text>
                     </span>
-                    <atomic-result-text field="source"></atomic-result-text>
-                  </span>
 
-                  <span class="field">
-                    <span class="field-label">
-                      <atomic-text value="language"></atomic-text>:
+                    <span class="field">
+                      <span class="field-label">
+                        <atomic-text value="language"></atomic-text>:
+                      </span>
+                      <atomic-result-multi-value-text
+                        field="language"
+                      ></atomic-result-multi-value-text>
                     </span>
-                    <atomic-result-multi-value-text
-                      field="language"
-                    ></atomic-result-multi-value-text>
-                  </span>
 
-                  <span class="field">
-                    <span class="field-label"> Date: </span>
-                    <atomic-result-date></atomic-result-date>
-                  </span>
+                    <span class="field">
+                      <span class="field-label"> Date: </span>
+                      <atomic-result-date></atomic-result-date>
+                    </span>
 
-                  <span class="field">
-                    <span class="field-label"> Topics: </span>
-                    <atomic-result-multi-value-text
-                      delimiter=";"
-                      max-values-to-display="3"
-                      field="concepts"
-                    ></atomic-result-multi-value-text>
-                  </span>
-                </atomic-result-fields-list>
-              </atomic-result-section-bottom-metadata>
-            </template>
-          </atomic-result-template>
-        </atomic-result-list>
-      </div>
-      <div class="pagination">
-        <atomic-load-more-results></atomic-load-more-results>
-      </div>
-      <div class="status">
-        <atomic-query-error></atomic-query-error>
-        <atomic-no-results></atomic-no-results>
-      </div>
+                    <span class="field">
+                      <span class="field-label"> Topics: </span>
+                      <atomic-result-multi-value-text
+                        delimiter=";"
+                        max-values-to-display="3"
+                        field="concepts"
+                      ></atomic-result-multi-value-text>
+                    </span>
+                  </atomic-result-fields-list>
+                </atomic-result-section-bottom-metadata>
+              </template>
+            </atomic-result-template>
+              <atomic-result-template must-match-source="Coveo - YouTube Playlists">
+                <template>
+                  <style>
+                    @import "styles/template.css";
+                  </style>
+                  <atomic-result-section-visual image-size="large" id="yt-visual">
+                    <atomic-result-image
+                      field="ytthumbnailurl"
+                    ></atomic-result-image>
+                  </atomic-result-section-visual>
+
+                  <atomic-result-section-badges>
+                    <atomic-result-badge field="source"></atomic-result-badge>
+                    <atomic-field-condition must-match-is-top-result="true">
+                      <atomic-result-badge
+                        class="featured"
+                        label="Featured result"
+                        icon="./images/featured.svg"
+                      ></atomic-result-badge>
+                    </atomic-field-condition>
+                    <atomic-field-condition must-match-is-recommendation="true">
+                      <atomic-result-badge
+                        class="recommended"
+                        label="Powered by machine learning"
+                        icon="./images/recommended.svg"
+                      ></atomic-result-badge>
+                    </atomic-field-condition>
+                  </atomic-result-section-badges>
+
+                  <atomic-result-section-title>
+                    <atomic-result-link></atomic-result-link>
+                  </atomic-result-section-title>
+
+                  <atomic-result-section-title-metadata>
+                    <atomic-result-printable-uri></atomic-result-printable-uri>
+                  </atomic-result-section-title-metadata>
+
+                  <atomic-result-section-excerpt>
+                    <atomic-result-text field="excerpt"></atomic-result-text>
+                  </atomic-result-section-excerpt>
+
+                  <atomic-result-section-bottom-metadata>
+                    <atomic-result-fields-list>
+                      <span class="field">
+                        <span class="field-label">
+                          <atomic-text value="source"></atomic-text>:
+                        </span>
+                        <atomic-result-text field="source"></atomic-result-text>
+                      </span>
+
+                      <span class="field">
+                        <span class="field-label">
+                          <atomic-text value="language"></atomic-text>:
+                        </span>
+                        <atomic-result-multi-value-text
+                          field="language"
+                        ></atomic-result-multi-value-text>
+                      </span>
+
+                      <span class="field">
+                        <span class="field-label"> Date: </span>
+                        <atomic-result-date></atomic-result-date>
+                      </span>
+
+                      <span class="field">
+                        <span class="field-label"> Topics: </span>
+                        <atomic-result-multi-value-text
+                          delimiter=";"
+                          max-values-to-display="3"
+                          field="concepts"
+                        ></atomic-result-multi-value-text>
+                      </span>
+                    </atomic-result-fields-list>
+                  </atomic-result-section-bottom-metadata>
+                </template>
+              </atomic-result-template>
+              <atomic-result-template>
+                <template>
+                  <style>
+                    @import "styles/template.css";
+                  </style>
+                  <atomic-result-section-visual>
+                    <atomic-field-condition
+                      must-match-source="Coveo - Level Up Courses"
+                    >
+                      <atomic-result-image
+                        field="course_image"
+                      ></atomic-result-image>
+                      <atomic-field-condition if-not-defined="course_image">
+                        <img src="./images/placeholder.png" alt="Academy" />
+                      </atomic-field-condition>
+                    </atomic-field-condition>
+                  </atomic-result-section-visual>
+
+                  <atomic-result-section-badges>
+                    <atomic-result-badge field="source"></atomic-result-badge>
+                    <atomic-field-condition must-match-is-top-result="true">
+                      <atomic-result-badge
+                        class="featured"
+                        label="Featured result"
+                        icon="./images/featured.svg"
+                      ></atomic-result-badge>
+                    </atomic-field-condition>
+                    <atomic-field-condition must-match-is-recommendation="true">
+                      <atomic-result-badge
+                        class="recommended"
+                        label="Powered by machine learning"
+                        icon="./images/recommended.svg"
+                      ></atomic-result-badge>
+                    </atomic-field-condition>
+                  </atomic-result-section-badges>
+
+                  <atomic-result-section-title>
+                    <atomic-result-link></atomic-result-link>
+                  </atomic-result-section-title>
+
+                  <atomic-result-section-title-metadata>
+                    <atomic-result-printable-uri></atomic-result-printable-uri>
+                  </atomic-result-section-title-metadata>
+
+                  <atomic-result-section-excerpt>
+                    <atomic-result-text field="description"></atomic-result-text>
+                  </atomic-result-section-excerpt>
+
+                  <atomic-result-section-bottom-metadata>
+                    <atomic-result-fields-list>
+                      <span class="field">
+                        <span class="field-label">
+                          <atomic-text value="source"></atomic-text>:
+                        </span>
+                        <atomic-result-text field="source"></atomic-result-text>
+                      </span>
+
+                      <span class="field">
+                        <span class="field-label">
+                          <atomic-text value="language"></atomic-text>:
+                        </span>
+                        <atomic-result-multi-value-text
+                          field="language"
+                        ></atomic-result-multi-value-text>
+                      </span>
+
+                      <span class="field">
+                        <span class="field-label"> Date: </span>
+                        <atomic-result-date></atomic-result-date>
+                      </span>
+
+                      <span class="field">
+                        <span class="field-label"> Topics: </span>
+                        <atomic-result-multi-value-text
+                          delimiter=";"
+                          max-values-to-display="3"
+                          field="concepts"
+                        ></atomic-result-multi-value-text>
+                      </span>
+                    </atomic-result-fields-list>
+                  </atomic-result-section-bottom-metadata>
+                </template>
+              </atomic-result-template>
+            </atomic-result-list>
+            <atomic-query-error></atomic-query-error>
+            <atomic-no-results></atomic-no-results>
+          </atomic-layout-section>
+          <atomic-layout-section section="pagination">
+            <atomic-load-more-results></atomic-load-more-results>
+          </atomic-layout-section>
+        </atomic-layout-section>
+      </atomic-search-layout>
     </atomic-search-interface>
   </body>
 </html>
