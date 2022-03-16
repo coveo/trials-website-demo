@@ -52,6 +52,7 @@ body {
   position: fixed;
   bottom: 40px;
   right: 32px;
+  z-index: 50;
 }
 
 .hidden {
@@ -74,6 +75,7 @@ body {
   position: fixed;
   bottom: 111px;
   right: 32px;
+  z-index: 50;
 }
 
 .floating-button {
