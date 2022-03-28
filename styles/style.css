@@ -8,6 +8,9 @@
   --atomic-primary-light: #D579A1;
   --atomic-primary-dark: #4D2C3A;
   --atomic-ring-primary: rgba(224, 78, 121, 0.5);
+
+  --spacing: 16px;
+  --search-box-width: 648px;
 }
 
 atomic-search-box {
@@ -35,7 +38,6 @@ body {
   position: absolute;
   top: 67px;
   right: 28px;
-  z-index: 3;
 }
 
 .code-sandbox-button {
@@ -52,7 +54,6 @@ body {
   position: fixed;
   bottom: 40px;
   right: 32px;
-  z-index: 50;
 }
 
 .hidden {
@@ -75,7 +76,6 @@ body {
   position: fixed;
   bottom: 111px;
   right: 32px;
-  z-index: 50;
 }
 
 .floating-button {
@@ -105,59 +105,125 @@ body {
   height: 80px;
 }
 
+.logo {
+  grid-area: logo;
+  display: grid;
+  align-content: center;
+  margin-left: 10px;
+}
+
+body.atomic-modal-opened {
+  overflow-y: hidden;
+}
+
+atomic-search-interface {
+  display: grid;
+  grid-template-columns: var(--spacing) 1fr var(--spacing);
+  grid-template-areas:
+    ". logo        ."
+    ". search      ."
+    ". status      ."
+    ". breadbox    ."
+    ". topbar      ."
+    ". results     ."
+    ". pagination  ."
+    ". .           .";
+}
+
+atomic-facet-manager {
+  display: none;
+}
+
+atomic-sort-dropdown {
+  display: none;
+}
+
+atomic-search-box {
+  grid-area: search;
+  margin: var(--spacing) 0;
+  width: 100%;
+  height: 3rem;
+}
+
+.status {
+  grid-area: status;
+}
+
+atomic-facet-manager {
+  grid-area: facets;
+  margin-top: var(--spacing);
+}
+
+atomic-facet-manager > * {
+  margin-bottom: var(--spacing);
+}
+
+atomic-breadbox {
+  grid-area: breadbox;
+  margin-top: var(--spacing);
+  padding-bottom: var(--spacing);
+  border-bottom: 1px solid var(--atomic-neutral);
+}
+
+.topbar {
+  grid-area: topbar;
+  margin: var(--spacing) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results {
+  grid-area: results;
+}
+
+.pagination {
+  grid-area: pagination;
+  margin: var(--spacing) 0;
+}
+
+.atomic-search-interface-no-results .topbar,
+.atomic-search-interface-no-results .results,
+.atomic-search-interface-no-results .pagination {
+  display: none;
+}
+
 atomic-facet[field="concepts"]::part(value-label) {
   text-transform: capitalize;
 }
 
-atomic-search-layout {
-  padding-top: 5rem;
-  position: relative;
-}
-
-.logo {
-  position: absolute;
-  display: grid;
-  align-self: center;
-  align-items: center;
-  height: 5rem;
-  top: 0;
-  left: 28px;
-  right: 0;
-  border-bottom: 1px solid var(--atomic-neutral);
-}
-
-.logo img {
-  display: none;
-  max-height: 2rem;
-}
-
-atomic-search-interface.hydrated .logo img {
-  display: block;
-}
-
 @media only screen and (min-width: 1024px) {
-  atomic-search-layout {
-    padding-top: 0;
+  atomic-search-interface {
+    column-gap: var(--spacing);
+    grid-template-columns: 1fr minmax(150px, 325px) minmax(500px, 1100px) 1fr;
+    grid-auto-flow: column;
+    grid-template-areas:
+      ". logo   search    ."
+      ". facets breadbox    ."
+      ". facets topbar      ."
+      ". facets results     ."
+      ". facets pagination  ."
+      ". facets status      ."
+      ". facets .           .";
+  }
+
+  atomic-facet-manager {
+    display: block;
+  }
+
+  atomic-refine-toggle {
+    display: none;
+  }
+
+  atomic-sort-dropdown {
+    display: block;
+  }
+
+  .status {
+    max-width: var(--search-box-width);
   }
 
   atomic-search-box {
-    max-width: 60%;
-  }
-
-  .logo {
-    position: unset;
-    justify-items: start;
-    grid-area: 1 / 2;
-    border-bottom: none;
-  }
-
-  .logo img {
-    max-height: 3rem;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  atomic-search-box {
-    max-width: 700px;
+    max-width: var(--search-box-width);
   }
 }
